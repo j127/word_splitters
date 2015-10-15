@@ -1,16 +1,13 @@
-"""Example of how to split a text file into words."""
+"""Example of how to split a text file into words.
+
+It doesn't take into account punctuation, but only splits on whitespace.
+"""
 
 
 f = open('text.txt', 'r')
 text = f.read()
 f.close()
 
-words = []
-for word in text.split():
-    print(word)
-    # or append to a list or whatever you want to do
-    words.append(word)
-
-# The list of words
+words = text.split()
 print(words)
 
